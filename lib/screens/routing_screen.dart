@@ -73,8 +73,18 @@ class RoutingScreen extends StatelessWidget {
 
             /// Filled button
             FilledButton(
-              onPressed: () {},
-              child: Text("Push"),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AuxiliarRouteScreen(),
+                    settings: const RouteSettings(
+                      arguments: 'hey ty'
+                    ),
+                  ),
+                );
+              },
+              child: const Text("Push"),
             ),
           ],
         ),

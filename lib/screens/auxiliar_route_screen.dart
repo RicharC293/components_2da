@@ -7,7 +7,7 @@ class AuxiliarRouteScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final arguments = ModalRoute.of(context)!.settings.arguments as String;
+    final arguments = ModalRoute.of(context)!.settings.arguments as String?;
     return Scaffold(
       appBar: AppBar(title: const Text('Pantalla Auxiliar')),
       body: Center(
