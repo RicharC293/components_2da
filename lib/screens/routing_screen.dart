@@ -78,9 +78,7 @@ class RoutingScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const AuxiliarRouteScreen(),
-                    settings: const RouteSettings(
-                      arguments: 'hey ty'
-                    ),
+                    settings: const RouteSettings(arguments: 'hey ty'),
                   ),
                 );
               },
