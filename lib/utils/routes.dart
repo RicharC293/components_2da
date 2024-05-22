@@ -1,3 +1,4 @@
+import 'package:componentes/screens/auxiliar_route_screen.dart';
 import 'package:componentes/screens/home_screen.dart';
 import 'package:componentes/screens/routing_screen.dart';
 import 'package:flutter/material.dart';
@@ -9,4 +10,5 @@ final Map<String, Widget Function(BuildContext)> routes = {
   // Otras pantallas
   // ...
   RoutingScreen.routeName: (context) => const RoutingScreen(),
+  AuxiliarRouteScreen.routeName: (contex) => const AuxiliarRouteScreen(),
 };
