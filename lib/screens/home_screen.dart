@@ -1,3 +1,4 @@
+import 'package:componentes/ejercicios/ejercicio_1/ejercicio_1_screen.dart';
 import 'package:componentes/screens/alerts_screen.dart';
 import 'package:componentes/screens/list_view_screen.dart';
 import 'package:componentes/screens/single_child_screen.dart';
@@ -98,6 +99,17 @@ class HomeScreen extends StatelessWidget {
             trailing: const Icon(Icons.arrow_forward_ios),
             onTap: () {
               // Navigator.pushNamed(context, ListViewScreen.routeName);
+            },
+          ),
+
+          const Divider(),
+          const Text("Ejercicios"),
+          ListTile(
+            leading: const Icon(Icons.remove_red_eye),
+            title: const Text("Ejercicio 1"),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              Navigator.pushNamed(context, Ejercicio1Screen.routeName);
             },
           ),
         ],

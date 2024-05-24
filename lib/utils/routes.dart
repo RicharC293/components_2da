@@ -1,3 +1,5 @@
+import 'package:componentes/ejercicios/ejercicio_1/ejercicio_1_screen.dart';
+import 'package:componentes/ejercicios/ejercicio_2/ejercicio_2_screen.dart';
 import 'package:componentes/screens/alerts_screen.dart';
 import 'package:componentes/screens/auxiliar_route_screen.dart';
 import 'package:componentes/screens/home_screen.dart';
@@ -20,4 +22,8 @@ final Map<String, Widget Function(BuildContext)> routes = {
   ListViewScreen.routeName: (context) => ListViewScreen(),
   SingleChildScreen.routeName: (context) => const SingleChildScreen(),
   AlertsScrenn.routeName: (context) => const AlertsScrenn(),
+
+  /// Ejercicios pantallas
+  Ejercicio1Screen.routeName: (context) => const Ejercicio1Screen(),
+  Ejercicio2Screen.routeName: (context) => const Ejercicio2Screen(),
 };
