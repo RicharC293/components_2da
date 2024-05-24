@@ -4,6 +4,7 @@ import 'package:componentes/screens/list_view_screen.dart';
 import 'package:componentes/screens/single_child_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../ejercicios/ejercicio_2/ejercicio_2_screen.dart';
 import 'routing_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -110,6 +111,14 @@ class HomeScreen extends StatelessWidget {
             trailing: const Icon(Icons.arrow_forward_ios),
             onTap: () {
               Navigator.pushNamed(context, Ejercicio1Screen.routeName);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.remove_red_eye),
+            title: const Text("Ejercicio 2"),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              Navigator.pushNamed(context, Ejercicio2Screen.routeName);
             },
           ),
         ],

@@ -25,5 +25,5 @@ final Map<String, Widget Function(BuildContext)> routes = {
 
   /// Ejercicios pantallas
   Ejercicio1Screen.routeName: (context) => const Ejercicio1Screen(),
-  Ejercicio2Screen.routeName: (context) => const Ejercicio2Screen(),
+  Ejercicio2Screen.routeName: (context) => Ejercicio2Screen(),
 };
