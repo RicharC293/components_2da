@@ -1,4 +1,6 @@
+import 'package:componentes/screens/alerts_screen.dart';
 import 'package:componentes/screens/list_view_screen.dart';
+import 'package:componentes/screens/single_child_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'routing_screen.dart';
@@ -16,7 +18,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Componentes"),
       ),
-      body: Column(
+      body: ListView(
         children: [
           ListTile(
             leading: const Icon(Icons.alt_route),
@@ -38,8 +40,64 @@ class HomeScreen extends StatelessWidget {
             leading: const Icon(Icons.list),
             title: const Text("List View"),
             trailing: const Icon(Icons.arrow_forward_ios),
-            onTap: (){
+            onTap: () {
               Navigator.pushNamed(context, ListViewScreen.routeName);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.list),
+            title: const Text("Single Child Scroll View"),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              Navigator.pushNamed(context, SingleChildScreen.routeName);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.add_alert_sharp),
+            title: const Text("Alertas"),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              Navigator.pushNamed(context, AlertsScrenn.routeName);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.card_giftcard),
+            title: const Text("Tarjetas"),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              // Navigator.pushNamed(context, ListViewScreen.routeName);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.photo),
+            title: const Text("Álbum de fotos"),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              // Navigator.pushNamed(context, ListViewScreen.routeName);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.play_arrow),
+            title: const Text("Sliders"),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              // Navigator.pushNamed(context, ListViewScreen.routeName);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.swap_vert_circle_outlined),
+            title: const Text("Infinity scroll"),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              // Navigator.pushNamed(context, ListViewScreen.routeName);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.format_strikethrough),
+            title: const Text("Formularios"),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              // Navigator.pushNamed(context, ListViewScreen.routeName);
             },
           ),
         ],
