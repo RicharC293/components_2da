@@ -13,7 +13,7 @@ Date una vuelta por nuestro apartado **Ejercicios** en donde te dejamos retos pa
 #### Segunda opción - RECOMENDADO
 Puedes crear tu propio repositorio y simular lo detallado en este repositorio, para evitar cualquier conflicto.
 
-### Ejercicios si estas usando el repositorio como fork
+### Ejercicios
 1. Ir a la carpeta ejercicios
 2. Seleccionar un ejercicio
 3. Leer el README para comprender el objetivo del ejercicio
