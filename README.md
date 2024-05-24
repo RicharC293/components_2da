@@ -18,3 +18,6 @@ Puedes crear tu propio repositorio y simular lo detallado en este repositorio, p
 2. Seleccionar un ejercicio
 3. Leer el README para comprender el objetivo del ejercicio
 4. Implementar la solución dentro del archivo ejercicio_<#>_screen.dart
+
+
+Si te sirve este repo no te olvides de darme una estrellita ⭐ 
