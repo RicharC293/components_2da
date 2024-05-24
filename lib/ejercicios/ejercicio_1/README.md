@@ -10,5 +10,4 @@ Adicionalmente te reto a crear:
 1. Floating action button, es una propiedad del scaffold. 
 
 ### Ver
-![Ejercicio1](https://github.com/RicharC293/components_2da/blob/main/ejercicio_1.png?raw=true)
-
+<img src="https://github.com/RicharC293/components_2da/blob/main/ejercicio_1.png?raw=true"  height="500">
