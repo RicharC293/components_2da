@@ -7,7 +7,10 @@ import 'package:componentes/screens/single_child_screen.dart';
 import 'package:flutter/material.dart';
 
 final Map<String, Widget Function(BuildContext)> routes = {
-  // '/mi-route' : (context) => MyWidget(),
+  // Define todas las rutas de pantallas en tú aplicación
+  //  Nombre de la ruta : callback que retorna la pantalla
+  //  HomeScreen.routeName: (context) => const HomeScreen(),
+  //'/mi-route' : (context) => MyWidget(),
   // '/'
   HomeScreen.routeName: (context) => const HomeScreen(),
   // Otras pantallas
@@ -15,6 +18,6 @@ final Map<String, Widget Function(BuildContext)> routes = {
   RoutingScreen.routeName: (context) => const RoutingScreen(),
   AuxiliarRouteScreen.routeName: (contex) => const AuxiliarRouteScreen(),
   ListViewScreen.routeName: (context) => ListViewScreen(),
-  SingleChildScreen.routeName:(context) => const SingleChildScreen(),
-  AlertsScrenn.routeName: (context) => const AlertsScrenn(), 
+  SingleChildScreen.routeName: (context) => const SingleChildScreen(),
+  AlertsScrenn.routeName: (context) => const AlertsScrenn(),
 };

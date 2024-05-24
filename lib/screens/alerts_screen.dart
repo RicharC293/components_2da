@@ -9,10 +9,15 @@ class AlertsScrenn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Alertas"),
+        title: const Text("Alertas"),
+
+        /// actions -> son las acciones que tendrá el app bar
+        /// Se encuentran ubicadas en la parte derecha del AppBar
         actions: [
+          /// Un button que recibe un icon, se basa en las guias de material
           IconButton(
             onPressed: () {
+              /// Método que permite renderizar una alerta de tipo material
               showDialog(
                   context: context,
 
@@ -48,7 +53,7 @@ class AlertsScrenn extends StatelessWidget {
                             /// Forzar cerrar la alerta
                             Navigator.pop(context);
                           },
-                          child: Text("Cancelar"),
+                          child: const Text("Cancelar"),
                         ),
                       ],
                     );
@@ -58,7 +63,7 @@ class AlertsScrenn extends StatelessWidget {
           ),
         ],
       ),
-      body: Center(child: Text("Alertas")),
+      body: const Center(child: Text("Alertas")),
     );
   }
 }
