@@ -29,8 +29,9 @@ class AlertsScrenn extends StatelessWidget {
 
                   /// Color de afuera
                   // barrierColor: Colors.amber,
-
+                  /// El builder es el metodo que se encarga de renderizar el contenido de la alerta
                   builder: (context) {
+                    /// Widget por defecto en Flutter para trabajar con alertas
                     return AlertDialog(
                       // Title
                       title: const Text('Mi primera alerta'),
@@ -63,7 +64,15 @@ class AlertsScrenn extends StatelessWidget {
           ),
         ],
       ),
-      body: const Center(child: Text("Alertas")),
+      body: Center(
+        /// Un boton de tipo texto
+        child: TextButton(
+          // Acción que va a ejecutar al presionar el btn
+          onPressed: () {},
+          // contenido del botón  -> Text
+          child: const Text("Show cupertino alert"),
+        ),
+      ),
     );
   }
 }
