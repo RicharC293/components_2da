@@ -1,5 +1,6 @@
 import 'package:componentes/ejercicios/ejercicio_1/ejercicio_1_screen.dart';
 import 'package:componentes/screens/alerts_screen.dart';
+import 'package:componentes/screens/cards_screen.dart';
 import 'package:componentes/screens/list_view_screen.dart';
 import 'package:componentes/screens/single_child_screen.dart';
 import 'package:flutter/material.dart';
@@ -67,7 +68,7 @@ class HomeScreen extends StatelessWidget {
             title: const Text("Tarjetas"),
             trailing: const Icon(Icons.arrow_forward_ios),
             onTap: () {
-              // Navigator.pushNamed(context, ListViewScreen.routeName);
+              Navigator.pushNamed(context, CardsScreen.routeName);
             },
           ),
           ListTile(
@@ -102,7 +103,6 @@ class HomeScreen extends StatelessWidget {
               // Navigator.pushNamed(context, ListViewScreen.routeName);
             },
           ),
-
           const Divider(),
           const Text("Ejercicios"),
           ListTile(
