@@ -158,10 +158,9 @@ class PhotoAlbumScreen extends StatelessWidget {
                 Text("2"),
                 Text("3"),
                 Text("4"),
-                Text("5"),
-                Text("6"),
               ],
             ),
+            //// Tarea -> 
           ),
         ],
       ),
