@@ -9,6 +9,8 @@ import 'package:componentes/screens/routing_screen.dart';
 import 'package:componentes/screens/single_child_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../screens/photo_album_screen.dart';
+
 final Map<String, Widget Function(BuildContext)> routes = {
   // Define todas las rutas de pantallas en tú aplicación
   //  Nombre de la ruta : callback que retorna la pantalla
@@ -24,6 +26,7 @@ final Map<String, Widget Function(BuildContext)> routes = {
   SingleChildScreen.routeName: (context) => const SingleChildScreen(),
   AlertsScrenn.routeName: (context) => const AlertsScrenn(),
   CardsScreen.routeName: (context) => const CardsScreen(),
+  PhotoAlbumScreen.routeName: (context) => const PhotoAlbumScreen(),
 
   /// Ejercicios pantallas
   Ejercicio1Screen.routeName: (context) => const Ejercicio1Screen(),
