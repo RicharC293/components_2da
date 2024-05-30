@@ -4,6 +4,7 @@ import 'package:componentes/screens/cards_screen.dart';
 import 'package:componentes/screens/list_view_screen.dart';
 import 'package:componentes/screens/photo_album_screen.dart';
 import 'package:componentes/screens/single_child_screen.dart';
+import 'package:componentes/screens/sliders_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../ejercicios/ejercicio_2/ejercicio_2_screen.dart';
@@ -85,7 +86,7 @@ class HomeScreen extends StatelessWidget {
             title: const Text("Sliders"),
             trailing: const Icon(Icons.arrow_forward_ios),
             onTap: () {
-              // Navigator.pushNamed(context, ListViewScreen.routeName);
+              Navigator.pushNamed(context, SlidersScreen.routeName);
             },
           ),
           ListTile(
