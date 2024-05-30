@@ -26,7 +26,7 @@ final Map<String, Widget Function(BuildContext)> routes = {
   SingleChildScreen.routeName: (context) => const SingleChildScreen(),
   AlertsScrenn.routeName: (context) => const AlertsScrenn(),
   CardsScreen.routeName: (context) => const CardsScreen(),
-  PhotoAlbumScreen.routeName: (context) => const PhotoAlbumScreen(),
+  PhotoAlbumScreen.routeName: (context) =>  PhotoAlbumScreen(),
 
   /// Ejercicios pantallas
   Ejercicio1Screen.routeName: (context) => const Ejercicio1Screen(),
