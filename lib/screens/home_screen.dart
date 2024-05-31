@@ -1,6 +1,7 @@
 import 'package:componentes/ejercicios/ejercicio_1/ejercicio_1_screen.dart';
 import 'package:componentes/screens/alerts_screen.dart';
 import 'package:componentes/screens/cards_screen.dart';
+import 'package:componentes/screens/infinity_scroll_screen.dart';
 import 'package:componentes/screens/list_view_screen.dart';
 import 'package:componentes/screens/photo_album_screen.dart';
 import 'package:componentes/screens/single_child_screen.dart';
@@ -94,7 +95,7 @@ class HomeScreen extends StatelessWidget {
             title: const Text("Infinity scroll"),
             trailing: const Icon(Icons.arrow_forward_ios),
             onTap: () {
-              // Navigator.pushNamed(context, ListViewScreen.routeName);
+              Navigator.pushNamed(context, InfinityScrollScreen.routeName);
             },
           ),
           ListTile(
