@@ -15,6 +15,9 @@ class _InfinityScrollScreenState extends State<InfinityScrollScreen> {
   /// Creando el objeto de la clase Services
   final imagesObj = Services();
 
+  /// Simpre me la creo como nula
+  /// Creo como null
+  /// if(images == null) -> loading
   List<String>? images;
 
   /// Variable 1 que va a ser la imagen inicial
@@ -23,10 +26,16 @@ class _InfinityScrollScreenState extends State<InfinityScrollScreen> {
   /// Variable 2 que va a ser el amount
   final amount = 10;
 
+  /// Controladores
+  /// ScrollController -> controllar el scroll de la página
+  /// Forma 1
+  // final scrollController = ScrollController();
+  /// Forma 2
+  late ScrollController scrollController;
+
   /// Hemos visto Statefull
   /// setState((){})
   /// buil se reconstruye
-
   /// init State -> define el inicio de tu widget - es algo que se va a ejecutar antes mostrarse
   /// el primer frame
 
@@ -34,6 +43,7 @@ class _InfinityScrollScreenState extends State<InfinityScrollScreen> {
   void initState() {
     super.initState();
     print("Init State");
+    scrollController = ScrollController();
     getImages();
   }
 
@@ -48,31 +58,69 @@ class _InfinityScrollScreenState extends State<InfinityScrollScreen> {
   @override
   void dispose() {
     print("Dispose");
+    scrollController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Infinity scroll")),
-      body: ListView.builder(
-        /// Retornar el widget a renderizar
-        itemBuilder: (context, index) {
-          return Card(
-            child: Image.network(
-              images?[index] ?? '',
-              height: 300,
+      appBar: AppBar(
+        title: const Text("Infinity scroll"),
+        actions: [
+          TextButton(
+              onPressed: () {
+                /// animateTo nos permite mover el scroll
+                // scrollController.animateTo(offset, duration: duration, curve: curve)
 
-              /// fit todas las imagenes
-              /// define la inscripción de una imagen
-              /// BoxFit
-              /// BoxFit.cover -> expande la imagen -> mucho cuidado con las dimensiones de las imagenes
-              /// xq se puede pixelear
-              fit: BoxFit.fitWidth,
-            ),
+                // se salta a un offset en específico
+                // scrollController.position.maxScrollExtent -> saltar hasta el fondo de la página
+                scrollController
+                    .jumpTo(scrollController.position.maxScrollExtent);
+              },
+              child: const Text("Ir al fondo")),
+        ],
+      ),
+      // Esto no es una buena práctica
+      // body: images == null
+      //     ? const CircularProgressIndicator()
+      //     : images!.isEmpty
+      //         ? Text("No hay datos")
+      //         :
+      body: Builder(
+        builder: (context) {
+          /// Loading ->
+          if (images == null) {
+            return const Center(child: CircularProgressIndicator());
+          }
+
+          /// Vacío
+          if (images!.isEmpty) {
+            return const Center(child: Text("Está vacío"));
+          }
+
+          return ListView.builder(
+            controller: scrollController,
+
+            /// Retornar el widget a renderizar
+            itemBuilder: (context, index) {
+              return Card(
+                child: Image.network(
+                  images![index],
+                  height: 300,
+
+                  /// fit todas las imagenes
+                  /// define la inscripción de una imagen
+                  /// BoxFit
+                  /// BoxFit.cover -> expande la imagen -> mucho cuidado con las dimensiones de las imagenes
+                  /// xq se puede pixelear
+                  fit: BoxFit.fitWidth,
+                ),
+              );
+            },
+            itemCount: images!.length,
           );
         },
-        itemCount: images?.length ?? 0,
       ),
 
       /// Future Builder
