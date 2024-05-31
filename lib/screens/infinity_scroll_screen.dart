@@ -13,6 +13,7 @@ class InfinityScrollScreen extends StatefulWidget {
 
 class _InfinityScrollScreenState extends State<InfinityScrollScreen> {
   /// Creando el objeto de la clase Services
+  /// NUNCA LO HAGAN -> prod 
   final imagesObj = Services();
 
   /// Simpre me la creo como nula
