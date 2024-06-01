@@ -3,6 +3,7 @@ import 'package:componentes/ejercicios/ejercicio_2/ejercicio_2_screen.dart';
 import 'package:componentes/screens/alerts_screen.dart';
 import 'package:componentes/screens/auxiliar_route_screen.dart';
 import 'package:componentes/screens/cards_screen.dart';
+import 'package:componentes/screens/forms_screen.dart';
 import 'package:componentes/screens/home_screen.dart';
 import 'package:componentes/screens/infinity_scroll_screen.dart';
 import 'package:componentes/screens/list_view_screen.dart';
@@ -31,6 +32,7 @@ final Map<String, Widget Function(BuildContext)> routes = {
   PhotoAlbumScreen.routeName: (context) => PhotoAlbumScreen(),
   SlidersScreen.routeName: (context) => const SlidersScreen(),
   InfinityScrollScreen.routeName: (context) => const InfinityScrollScreen(),
+  FormsScreen.routeName: (context) => const FormsScreen(),
 
   /// Ejercicios pantallas
   Ejercicio1Screen.routeName: (context) => const Ejercicio1Screen(),

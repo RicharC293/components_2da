@@ -57,13 +57,31 @@ class AlertsScrenn extends StatelessWidget {
                       // Title
                       title: const Text('Mi primera alerta'),
                       // Contenido interno de la alerta
-                      content: const Column(
+                      content: Column(
                         mainAxisSize: MainAxisSize.min,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                               "Esta es mi primera alerta, Esta es mi primera alerta, Esta es mi primera alerta, Esta es mi primera alerta"),
                           FlutterLogo(),
+                          TextFormField(
+                            validator: (value) {
+                              /// Validator -> no sea vacío
+                              if (value == null) {
+                                return "Es requerido";
+                              }
+
+                              /// Que no sea un string vacío
+                              if (value.isEmpty) {
+                                return "Es requerido";
+                              }
+
+                              /// Todas las condiciones que queramos
+                              /// Validar si son emails -> Regex
+                              /// Validar que sean letras -> Regex
+                              return null;
+                            },
+                          ),
                         ],
                       ),
 

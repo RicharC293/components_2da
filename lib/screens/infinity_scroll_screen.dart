@@ -98,6 +98,12 @@ class _InfinityScrollScreenState extends State<InfinityScrollScreen> {
     setState(() {});
   }
 
+  Future<void> refresh() async {
+    initialImage = 20;
+    images = await imagesObj.getImages(initialImage, amount);
+    setState(() {});
+  }
+
   /// dispose -> se va a detonar al destruir la pantalla - cerrarla
   @override
   void dispose() {
@@ -182,6 +188,7 @@ class _InfinityScrollScreenState extends State<InfinityScrollScreen> {
           /// Personas<double>
           /// T variable
           /// double variable
+          /// RefreshIndicator -> hace pull refresh sirve para actualizar
           return NotificationListener<ScrollNotification>(
             onNotification: (notification) {
               // print(notification.metrics.pixels);
@@ -216,26 +223,31 @@ class _InfinityScrollScreenState extends State<InfinityScrollScreen> {
 
               return true;
             },
-            child: ListView.builder(
-              controller: scrollController,
-
-              /// Retornar el widget a renderizar
-              itemBuilder: (context, index) {
-                return Card(
-                  child: Image.network(
-                    images![index],
-                    height: 300,
-
-                    /// fit todas las imagenes
-                    /// define la inscripción de una imagen
-                    /// BoxFit
-                    /// BoxFit.cover -> expande la imagen -> mucho cuidado con las dimensiones de las imagenes
-                    /// xq se puede pixelear
-                    fit: BoxFit.fitWidth,
-                  ),
-                );
+            child: RefreshIndicator(
+              onRefresh: () async {
+                await refresh();
               },
-              itemCount: images!.length,
+              child: ListView.builder(
+                controller: scrollController,
+
+                /// Retornar el widget a renderizar
+                itemBuilder: (context, index) {
+                  return Card(
+                    child: Image.network(
+                      images![index],
+                      height: 300,
+
+                      /// fit todas las imagenes
+                      /// define la inscripción de una imagen
+                      /// BoxFit
+                      /// BoxFit.cover -> expande la imagen -> mucho cuidado con las dimensiones de las imagenes
+                      /// xq se puede pixelear
+                      fit: BoxFit.fitWidth,
+                    ),
+                  );
+                },
+                itemCount: images!.length,
+              ),
             ),
           );
         },
